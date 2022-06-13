@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="springdatabase.mybatis.dao.GoodMapper">
+	<select id="listGood"
+		resultType="springdatabase.mybatis.domain.Good">
+		select * from
+		goods
+	</select>
+	<select id="getGood"
+		resultType="springdatabase.mybatis.domain.Good" parameterType="int">
+		select *
+		from goods
+		where code = #{code}
+	</select>
+</mapper>
